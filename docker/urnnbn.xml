@@ -1,0 +1,15 @@
+<Context>
+		<Parameter name="dependencyProviderClassName"
+		value="se.uu.ub.cora.therest.initialize.TheRestDependencyProvider" override="false" />
+
+	<Parameter name="urlPatternForUrnNbn" value="${urlPatternForUrnNbn}"
+		override="false" />
+		
+	<Parameter name="coraDatabaseLookupName" value="java:/comp/env/jdbc/coraPostgres"
+		override="false" />
+		
+	<Resource name="jdbc/coraPostgres" auth="Container" type="javax.sql.DataSource"
+		driverClassName="org.postgresql.Driver"
+		url="${database.url}" username="${database.user}" password="${database.password}"
+		maxTotal="20" maxIdle="10" maxWaitMillis="-1" />
+</Context>
